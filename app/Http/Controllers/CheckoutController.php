@@ -19,6 +19,7 @@ class CheckoutController extends Controller
         //Save User data
         $user = Auth::user();
         $user->update($request->except('total_price'));
+        
 
         //Proses Checkout
         $code = 'STORE-' . mt_rand(00000, 99999);
@@ -33,6 +34,7 @@ class CheckoutController extends Controller
             'transaction_status' => "PENDING",
             'code' => $code
         ]);
+        // dd($transaction); 
 
         foreach($carts as $cart)
         {

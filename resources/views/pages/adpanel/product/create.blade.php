@@ -36,13 +36,13 @@
                                         <input type="text" name="name" class="form-control" required>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-12" hidden>
                                     <div class="form-group">
                                         <label >Pemilik Product</label>
-                                        <select name="users_id" class="form-control">
-                                            @foreach ($users as $user)
-                                                <option value="{{$user->id}}">{{$user->name}}</option>
-                                            @endforeach
+                                        <select name="users_id" class="form-control" >
+                                            <!-- @foreach ($users as $user) -->
+                                                <option value="{{Auth::user()->id}}">{{Auth::user()->name}}</option>
+                                            <!-- @endforeach -->
                                         </select>
                                     </div>
                                 </div>

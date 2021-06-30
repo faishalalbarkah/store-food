@@ -41,7 +41,7 @@
           <a href={{ route('category.index') }} class="list-group-item list-group-item-action {{(request()->is('adpanel/category*')) ? 'active' : '' }}">
             Categories
           </a>
-           <a href={{ route('transaction.index')}} class="list-group-item list-group-item-action">
+           <a href={{ route('transaction.index')}} class="list-group-item list-group-item-action {{(request()->is('adpanel/transaction*')) ? 'active' : '' }}">
             Transactions
           </a>
            <a href={{ route('user.index') }}  class="list-group-item list-group-item-action {{(request()->is('adpanel/user*')) ? 'active' : '' }}">
@@ -72,7 +72,7 @@
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link" role="button" data-toggle="dropdown">
                     <img src={{url("./images/user.png")}} alt="" class="rounded-circle mr-2 profile-picture">
-                    Hi, Depay
+                    Hi, {{Auth::user()->name}}
                   </a>
                   <div class="dropdown-menu">
 

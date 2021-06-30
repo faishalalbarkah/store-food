@@ -74,7 +74,7 @@
 
               </div>
 
-              <div class="form-group">
+              <div class="form-group" hidden>
                 <label>Store</label>
                 <p class="text-muted">
                   Apakah anda ingin membuka toko?
@@ -87,7 +87,7 @@
                 </div>
 
                 <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" class="custom-control-input" name="is_store_open" id="openStoreFalse" v-model="is_store_open" :value="false">
+                  <input type="radio"  class="custom-control-input" name="is_store_open" id="openStoreFalse" v-model="is_store_open" :value="false" >
                   <label for="openStoreFalse" class="custom-control-label">
                     Tidak, terimakasih.
                   </label>
@@ -186,9 +186,9 @@
     },
     data() {
         return {
-            name: "Wakwaw",
-            email: 'wakwaw@gmail.com',
-            is_store_open: true,
+            name: "",
+            email: '',
+            is_store_open: false,
             store_name: '',
             email_unavailable: false
         }
